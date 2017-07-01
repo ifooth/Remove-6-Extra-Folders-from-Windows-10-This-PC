@@ -15,13 +15,13 @@ Its happening because Microsoft has changed the Registry keys and CLSIDs in Wind
 
 I investigated and looked into Windows 10 Registry Editor and finally found a way to remove those 6 folders. Though it took a bit time in finding those Registry keys.
 
-Now in Windows 10, Microsoft is using a new string "ThisPCPolicy" in Registry to show or hide items in "This PC" window. If the string value is set to "Show", that particular item is shown in "This PC" window and if the string value is set to "Hide", that item is not shown in "This PC" window.
+Now in Windows 10, Microsoft is using a new string **"ThisPCPolicy"** in Registry to show or hide items in **"This PC"** window. If the string value is set to **"Show"**, that particular item is shown in "This PC" window and if the string value is set to **"Hide"**, that item is not shown in "This PC" window.
 
-So we just need to change the value of "ThisPCPolicy" to "Hide" for all 6 folders CLSID in Registry and they will immediately disappear from "This PC" window.
+So we just need to change the value of **"ThisPCPolicy"** to **"Hide"** for all 6 folders CLSID in Registry and they will immediately disappear from "This PC" window.
 
 If you also want to remove those extra and annoying 6 folders from Windows 10 "This PC" window, check out following simple steps:
 
-1. Press WIN+R keys together to open RUN dialog box. You can also open it from WIN+X menu. Now type regedit in RUN dialog box and press Enter. It'll open Registry Editor.
+1. Press **WIN+R** keys together to open RUN dialog box. You can also open it from WIN+X menu. Now type **regedit** in RUN dialog box and press Enter. It'll open **Registry Editor**.
 
 2. Now go to following keys one by one:
 ```
@@ -81,7 +81,7 @@ PS: There is another easier way to change value of "ThisPCPolicy" string to Hide
 
 NOTE: If you don't want to manually change keys and values in Registry, you can download following ready-made registry script to do the task automatically. Just download ZIP file, extract it using 7-Zip or any other file archive software and you'll get 2 .REG files to hide or show these 6 folders in Windows 10 "This PC" window:
 
-Download Registry Script to Remove 6 Extra Folders from Windows 10 This PC
+[Download Registry Script to Remove 6 Extra Folders from Windows 10 This PC](https://github.com/ifooth/Remove-6-Extra-Folders-from-Windows-10-This-PC/releases)
 
 BONUS TIP:
 
