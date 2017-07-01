@@ -1,4 +1,5 @@
-[Tip] Remove 6 Extra Folders from Windows 10 Explorer “This PC”
+Remove 6 Extra Folders from Windows 10 Explorer “This PC”
+=============================================================
 
 When Windows 8.1 operating system was released, Microsoft renamed the good ol' Windows Explorer or My Computer to "This PC". Also to enhance "This PC" functionality and UI, Microsoft added 6 extra folder to it which were Desktop, Documents, Downloads, Music, Pictures and Videos.
 
@@ -8,7 +9,7 @@ For many people those extra folders were quite useless and were taking a good am
 
 Now Windows 10 has been released and it also comes with the same "This PC" window and 6 annoying folders. Unfortunately the old trick to get rid of these 6 folders which we shared for Windows 8.1, doesn't work in Windows 10.
 
-Extra_Folders_Windows_10_This_PC.png
+![img](https://github.com/ifooth/Remove-6-Extra-Folders-from-Windows-10-This-PC/images/Extra_Folders_Windows_10_This_PC.png)
 
 Its happening because Microsoft has changed the Registry keys and CLSIDs in Windows 10, that's why the old Registry script to remove those 6 folders is not applicable to Windows 10.
 
@@ -44,17 +45,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ FolderDes
 ```
 and change value of "ThisPCPolicy" string to Hide in each key.
 
-Hide_This_PC_Folders_Windows_10_Registry.png
+![img](https://github.com/ifooth/Remove-6-Extra-Folders-from-Windows-10-This-PC/images/Hide_This_PC_Folders_Windows_10_Registry.png)
 
 NOTE: All above mentioned keys contain "ThisPCPolicy" string except "{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" key which is responsible for Desktop folder. So you'll need to manually create new string "ThisPCPolicy" and set its value to Hide for this key.
 
 3. That's it. Now open "This PC" window and you'll no longer see those extra 6 folders.
 
-No_Extra_Folders_Windows_10_This_PC.png
+![img](https://github.com/ifooth/Remove-6-Extra-Folders-from-Windows-10-This-PC/images/No_Extra_Folders_Windows_10_This_PC.png)
 
 UPDATE: Some 3rd party 32-bit programs may still show these unnecessary 6 folders in "Browse" dialog box such as Save, Save as or Open file as shown in following screenshot:
 
-Extra_Folders_Windows_10_Browse_Dialog_Box.png
+![img](https://github.com/ifooth/Remove-6-Extra-Folders-from-Windows-10-This-PC/images/Extra_Folders_Windows_10_Browse_Dialog_Box.png)
 
 To remove these 6 folders from Browse window as well, you'll also need to set "ThisPCPolicy" string to Hide for following keys:
 ```
